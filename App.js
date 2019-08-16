@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Search from "./components/Search";
+import Navigation from "./Navigation/Navigation";
 
 class App extends Component {
   state = {};
   render() {
-    return <Search />;
+    return <Navigation />;
   }
 }
 
