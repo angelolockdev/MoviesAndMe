@@ -10,3 +10,16 @@ export function getFilmsFromApiWithSearchedText(search, page) {
 export function getImageFromApi(name) {
   return "https://image.tmdb.org/t/p/w300" + name;
 }
+
+export function getFilmDetailFromApi(id) {
+  const url =
+    "https://api.themoviedb.org/3/movie/" +
+    id +
+    "?api_key=" +
+    API_TOKEN +
+    "&language=fr";
+  // const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_TOKEN}&language=fr`;
+  return fetch(url)
+    .then(response => response.json())
+    .catch(error => console.log(error));
+}
